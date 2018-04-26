@@ -11,7 +11,7 @@ public class ProgramFrame
         mainFrame = new JFrame("JDM");
         mainFrame.setLocationRelativeTo(null);
         mainFrame.setPreferredSize(null);
-        
+
     }
 
     public void showFrame ()
