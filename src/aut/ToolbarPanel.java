@@ -11,6 +11,8 @@ public class ToolbarPanel
     {
         toolbarPanel = new Panel();
 
+        toolbarPanel.setLayout(new GridLayout());
+
         JButton newDownload = new JButton("New Download");
         JButton pause = new JButton("Pause");
         JButton resume = new JButton("Resume");

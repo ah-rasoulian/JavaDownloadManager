@@ -1,6 +1,7 @@
 package aut;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class ProgramFrame
 {
@@ -12,15 +13,20 @@ public class ProgramFrame
         mainFrame.setLocationRelativeTo(null);
         mainFrame.setPreferredSize(null);
         JPanel framePanel = new JPanel();
+        framePanel.setLayout(new BorderLayout());
         mainFrame.setContentPane(framePanel);
 
+        Panel toolbarAndMenu = new Panel();
+        toolbarAndMenu.setLayout(new BorderLayout());
+        framePanel.add(toolbarAndMenu , BorderLayout.NORTH) ;
+
         ToolbarPanel toolBar = new ToolbarPanel();
+        toolbarAndMenu.add(toolBar.getToolbarPanel() ,BorderLayout.CENTER);
 
         MenubarPanel menuBar = new MenubarPanel();
+        toolbarAndMenu.add(menuBar.getMenuPanel() , BorderLayout.NORTH);
 
-        framePanel.add(toolBar.getToolbarPanel());
-        framePanel.add(menuBar.getMenuPanel());
-
+        mainFrame.pack();
     }
 
     public void showFrame ()
