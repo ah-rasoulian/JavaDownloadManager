@@ -9,8 +9,9 @@ public class NewDownloadFrame
     public NewDownloadFrame ()
     {
         newDownloadFrame = new JFrame("New Download");
+        newDownloadFrame.setLocationRelativeTo(null);
         JPanel mainPanel = new JPanel();
-        mainPanel.setLayout(new BorderLayout());
+        mainPanel.setLayout(new GridLayout(3,1));
         newDownloadFrame.setContentPane(mainPanel);
 
         JPanel topOfPanel = new JPanel();
@@ -25,14 +26,23 @@ public class NewDownloadFrame
         topOfPanel.add(saveAddress);
 
         JPanel bottomOfPanel = new JPanel();
+        SpringLayout bottomLayout = new SpringLayout();
+        bottomOfPanel.setLayout(bottomLayout);
         JButton ok = new JButton("OK");
         JButton cancel = new JButton("Cancel");
+
+        bottomLayout.putConstraint(SpringLayout.EAST,bottomOfPanel , 10 , SpringLayout.EAST , cancel);
+        bottomLayout.putConstraint(SpringLayout.WEST,cancel , 10 , SpringLayout.EAST , ok);
 
         bottomOfPanel.add(ok);
         bottomOfPanel.add(cancel);
 
-        mainPanel.add(topOfPanel,BorderLayout.NORTH);
-        mainPanel.add(bottomOfPanel,BorderLayout.SOUTH);
+        JPanel middleOfPanel = new JPanel();
+
+
+        mainPanel.add(topOfPanel);
+        mainPanel.add(middleOfPanel);
+        mainPanel.add(bottomOfPanel);
 
         newDownloadFrame.pack();
     }

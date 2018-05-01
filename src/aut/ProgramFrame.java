@@ -16,7 +16,7 @@ public class ProgramFrame
         framePanel.setLayout(new BorderLayout());
         mainFrame.setContentPane(framePanel);
 
-        Panel toolbarAndMenu = new Panel();
+        JPanel toolbarAndMenu = new JPanel();
         toolbarAndMenu.setLayout(new BorderLayout());
         framePanel.add(toolbarAndMenu , BorderLayout.NORTH) ;
 
@@ -26,6 +26,9 @@ public class ProgramFrame
         MenubarPanel menuBar = new MenubarPanel();
         toolbarAndMenu.add(menuBar.getMenuPanel() , BorderLayout.NORTH);
 
+        MiddlePanel middlePanel = new MiddlePanel(toolBar);
+
+        framePanel.add(middlePanel.getMiddlePanel(),BorderLayout.CENTER);
         mainFrame.pack();
     }
 

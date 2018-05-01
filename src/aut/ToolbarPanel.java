@@ -3,20 +3,26 @@ package aut;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class ToolbarPanel
 {
     private Panel toolbarPanel;
+    private JButton newDownload;
 
     public ToolbarPanel ()
     {
+        HandleActions handleActions = new HandleActions();
+
         toolbarPanel = new Panel();
 
         toolbarPanel.setLayout(new GridLayout());
 
         ImageIcon newIcon = new ImageIcon("\\Users\\AHR96\\Desktop\\JavaDownloadManager\\Icons\\new.png");
-        JButton newDownload = new JButton("New Download",newIcon);
+        newDownload = new JButton("New Download",newIcon);
         newDownload.setBackground(Color.white);
+        newDownload.addActionListener(handleActions);
 
         ImageIcon pauseIcon = new ImageIcon("\\Users\\AHR96\\Desktop\\JavaDownloadManager\\Icons\\pause.png");
         JButton pause = new JButton("Pause",pauseIcon);
@@ -48,5 +54,17 @@ public class ToolbarPanel
 
     public Panel getToolbarPanel() {
         return toolbarPanel;
+    }
+
+    private class HandleActions implements ActionListener
+    {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if (e.getSource().equals(newDownload))
+            {
+                NewDownload newDownload = new NewDownload();
+            }
+        }
     }
 }
