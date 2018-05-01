@@ -9,8 +9,8 @@ public class ProgramFrame
 
     public ProgramFrame ()
     {
-        mainFrame = new JFrame("JDM");
-        mainFrame.setLocationRelativeTo(null);
+        mainFrame = new JFrame("Java Download Manager");
+        //mainFrame.setLocationRelativeTo(null);
         mainFrame.setPreferredSize(null);
         JPanel framePanel = new JPanel();
         framePanel.setLayout(new BorderLayout());
