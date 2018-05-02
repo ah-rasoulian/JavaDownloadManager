@@ -2,12 +2,22 @@ package aut;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.HashMap;
 
 public class NewDownloadFrame
 {
-    JFrame newDownloadFrame ;
+    private JFrame newDownloadFrame ;
+    private JButton ok;
+    private JTextField urlAddress;
+    private JTextField saveAddress;
+    private JButton cancel;
+
     public NewDownloadFrame ()
     {
+        HandleActions handleActions = new HandleActions();
+
         newDownloadFrame = new JFrame("New Download");
         newDownloadFrame.setLocationRelativeTo(null);
         JPanel mainPanel = new JPanel();
@@ -17,25 +27,25 @@ public class NewDownloadFrame
         JPanel topOfPanel = new JPanel();
         topOfPanel.setLayout(new GridLayout(2,2));
         JLabel urlName = new JLabel("URL Address");
-        JTextField urlAddress = new JTextField("URL:");
+        urlAddress = new JTextField("URL:");
         JLabel saveAdressName = new JLabel("Save Location");
-        JTextField saveAddress = new JTextField("Save Location");
+        saveAddress = new JTextField("Save Location");
         topOfPanel.add(urlName);
         topOfPanel.add(urlAddress);
         topOfPanel.add(saveAdressName);
         topOfPanel.add(saveAddress);
 
         JPanel bottomOfPanel = new JPanel();
-        SpringLayout bottomLayout = new SpringLayout();
-        bottomOfPanel.setLayout(bottomLayout);
-        JButton ok = new JButton("OK");
-        JButton cancel = new JButton("Cancel");
+        bottomOfPanel.setLayout(new FlowLayout());
 
-        bottomLayout.putConstraint(SpringLayout.EAST,bottomOfPanel , 10 , SpringLayout.EAST , cancel);
-        bottomLayout.putConstraint(SpringLayout.WEST,cancel , 10 , SpringLayout.EAST , ok);
+        ok = new JButton("OK");
+        ok.addActionListener(handleActions);
+
+        cancel = new JButton("Cancel");
 
         bottomOfPanel.add(ok);
         bottomOfPanel.add(cancel);
+
 
         JPanel middleOfPanel = new JPanel();
 
@@ -50,5 +60,18 @@ public class NewDownloadFrame
     public void showFrame ()
     {
         newDownloadFrame.setVisible(true);
+    }
+
+    private class HandleActions implements ActionListener
+    {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if ( e.getSource().equals(ok))
+            {
+                NewDownload newDownload = new NewDownload(urlAddress.getText() , saveAddress.getText());
+                newDownloadFrame.setVisible(false);
+            }
+        }
     }
 }

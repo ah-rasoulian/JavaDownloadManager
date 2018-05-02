@@ -6,6 +6,8 @@ import java.awt.*;
 public class ProgramFrame
 {
     private JFrame mainFrame ;
+    private static MiddlePanel middlePanel;
+    private static Dimension width;
 
     public ProgramFrame ()
     {
@@ -21,19 +23,31 @@ public class ProgramFrame
         framePanel.add(toolbarAndMenu , BorderLayout.NORTH) ;
 
         ToolbarPanel toolBar = new ToolbarPanel();
+        width = toolBar.getToolbarPanel().getPreferredSize() ;
         toolbarAndMenu.add(toolBar.getToolbarPanel() ,BorderLayout.CENTER);
 
         MenubarPanel menuBar = new MenubarPanel();
         toolbarAndMenu.add(menuBar.getMenuPanel() , BorderLayout.NORTH);
 
-        MiddlePanel middlePanel = new MiddlePanel(toolBar);
+        middlePanel = new MiddlePanel(toolBar);
 
         framePanel.add(middlePanel.getMiddlePanel(),BorderLayout.CENTER);
         mainFrame.pack();
     }
 
+    public static void addNew (JPanel newDownload)
+    {
+        middlePanel.getMiddlePanel().add(newDownload);
+        middlePanel.getMiddlePanel().revalidate();
+        middlePanel.getMiddlePanel().repaint();
+    }
+
     public void showFrame ()
     {
         mainFrame.setVisible(true);
+    }
+
+    public static Dimension getWidth() {
+        return width;
     }
 }

@@ -2,9 +2,10 @@ package aut;
 
 public class NewDownload
 {
-    public NewDownload ()
+    public NewDownload (String url , String saveAdress)
     {
-        NewDownloadFrame frame = new NewDownloadFrame();
-        frame.showFrame();
+        DownloadPanel downloadPanel = new DownloadPanel(url ,100,20);
+        ProgramFrame.addNew( downloadPanel.getDownloadPanel() );
     }
+
 }

@@ -5,12 +5,14 @@ import java.awt.*;
 
 public class MiddlePanel
 {
-    JPanel middlePanel ;
+    private JPanel middlePanel ;
 
     public MiddlePanel(ToolbarPanel toolbarPanel)
     {
         middlePanel = new JPanel();
-        middlePanel.setPreferredSize(new Dimension(toolbarPanel.getToolbarPanel().getPreferredSize().width,500));
+        middlePanel.setLayout(new GridLayout(10,1));
+
+        middlePanel.setPreferredSize(new Dimension(ProgramFrame.getWidth().width,500));
         middlePanel.setBackground(Color.yellow);
 
     }
@@ -18,4 +20,5 @@ public class MiddlePanel
     public JPanel getMiddlePanel() {
         return middlePanel;
     }
+
 }
