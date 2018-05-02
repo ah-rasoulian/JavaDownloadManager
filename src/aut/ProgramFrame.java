@@ -29,7 +29,7 @@ public class ProgramFrame
         MenubarPanel menuBar = new MenubarPanel();
         toolbarAndMenu.add(menuBar.getMenuPanel() , BorderLayout.NORTH);
 
-        middlePanel = new MiddlePanel(toolBar);
+        middlePanel = new MiddlePanel();
 
         framePanel.add(middlePanel.getMiddlePanel(),BorderLayout.CENTER);
         mainFrame.pack();

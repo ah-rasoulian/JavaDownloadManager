@@ -7,7 +7,7 @@ public class MiddlePanel
 {
     private JPanel middlePanel ;
 
-    public MiddlePanel(ToolbarPanel toolbarPanel)
+    public MiddlePanel()
     {
         middlePanel = new JPanel();
         middlePanel.setLayout(new GridLayout(10,1));

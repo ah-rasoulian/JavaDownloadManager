@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.HashMap;
+
 
 public class NewDownloadFrame
 {
@@ -28,11 +28,11 @@ public class NewDownloadFrame
         topOfPanel.setLayout(new GridLayout(2,2));
         JLabel urlName = new JLabel("URL Address");
         urlAddress = new JTextField("URL:");
-        JLabel saveAdressName = new JLabel("Save Location");
+        JLabel saveAddressName = new JLabel("Save Location");
         saveAddress = new JTextField("Save Location");
         topOfPanel.add(urlName);
         topOfPanel.add(urlAddress);
-        topOfPanel.add(saveAdressName);
+        topOfPanel.add(saveAddressName);
         topOfPanel.add(saveAddress);
 
         JPanel bottomOfPanel = new JPanel();
@@ -42,6 +42,7 @@ public class NewDownloadFrame
         ok.addActionListener(handleActions);
 
         cancel = new JButton("Cancel");
+        cancel.addActionListener(handleActions);
 
         bottomOfPanel.add(ok);
         bottomOfPanel.add(cancel);
@@ -72,6 +73,8 @@ public class NewDownloadFrame
                 NewDownload newDownload = new NewDownload(urlAddress.getText() , saveAddress.getText());
                 newDownloadFrame.setVisible(false);
             }
+            if ( e.getSource().equals(cancel))
+                newDownloadFrame.setVisible(false);
         }
     }
 }
