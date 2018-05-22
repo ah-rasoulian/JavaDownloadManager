@@ -10,10 +10,11 @@ public class MiddlePanel
     public MiddlePanel()
     {
         middlePanel = new JPanel();
-        middlePanel.setLayout(new GridLayout(10,1));
+        middlePanel.setLayout(new BoxLayout(middlePanel , BoxLayout.Y_AXIS));
 
         middlePanel.setPreferredSize(new Dimension(ProgramFrame.getWidth().width,500));
         middlePanel.setBackground(Color.GRAY);
+        
 
     }
 

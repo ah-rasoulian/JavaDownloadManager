@@ -11,6 +11,7 @@ public class DownloadPanel
     public DownloadPanel (String nameOfFile , Integer volumeOfFile , Integer volumeOfDownloaded)
     {
         downloadPanel = new JPanel();
+        downloadPanel.setPreferredSize(new Dimension(20,20));
         //SpringLayout layout = new SpringLayout();
         //downloadPanel.setLayout(layout);
         downloadPanel.setLayout(new GridLayout(1,3));
