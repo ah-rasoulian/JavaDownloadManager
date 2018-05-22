@@ -22,34 +22,34 @@ public class ToolbarPanel
         toolbarPanel = new Panel();
         BoxLayout layout = new BoxLayout(toolbarPanel , BoxLayout.X_AXIS);
         toolbarPanel.setLayout(layout);
-        toolbarPanel.setBackground(Color.CYAN);
+        toolbarPanel.setBackground(Color.WHITE);
 
         toolbarPanel.setPreferredSize(new Dimension(0 , 50));
 
         ImageIcon newIcon = new ImageIcon("\\Users\\AHR96\\Desktop\\JavaDownloadManager\\Icons\\add.png");
         newDownload = new JButton(newIcon);
-        newDownload.setBackground(Color.CYAN);
+        newDownload.setBackground(Color.WHITE);
         newDownload.addActionListener(handleActions);
 
         ImageIcon pauseIcon = new ImageIcon("\\Users\\AHR96\\Desktop\\JavaDownloadManager\\Icons\\pause.png");
         pause = new JButton(pauseIcon);
-        pause.setBackground(Color.CYAN);
+        pause.setBackground(Color.WHITE);
 
         ImageIcon resumeIcon = new ImageIcon("\\Users\\AHR96\\Desktop\\JavaDownloadManager\\Icons\\play.png");
         resume = new JButton(resumeIcon);
-        resume.setBackground(Color.CYAN);
+        resume.setBackground(Color.WHITE);
 
         ImageIcon cancelIcon = new ImageIcon("\\Users\\AHR96\\Desktop\\JavaDownloadManager\\Icons\\remove.png");
         cancel = new JButton(cancelIcon);
-        cancel.setBackground(Color.CYAN);
+        cancel.setBackground(Color.WHITE);
 
         ImageIcon removeIcon = new ImageIcon("\\Users\\AHR96\\Desktop\\JavaDownloadManager\\Icons\\taskcleaner.png");
         remove = new JButton(removeIcon);
-        remove.setBackground(Color.CYAN);
+        remove.setBackground(Color.WHITE);
 
         ImageIcon settingIcon = new ImageIcon("\\Users\\AHR96\\Desktop\\JavaDownloadManager\\Icons\\settings.png");
         setting = new JButton(settingIcon);
-        setting.setBackground(Color.CYAN);
+        setting.setBackground(Color.WHITE);
 
         toolbarPanel.add(newDownload);
         toolbarPanel.add(resume);

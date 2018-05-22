@@ -27,20 +27,31 @@ public class LeftPanel extends JPanel
         }
 
         processing = new JButton("Processing");
-        processing.setPreferredSize(new Dimension(265 , 30));
+        processing.setPreferredSize(new Dimension(265 , 40));
         processing.setBackground(Color.DARK_GRAY);
+        processing.setForeground(Color.WHITE);
+        ImageIcon processingIcon = new ImageIcon("\\Users\\AHR96\\Desktop\\JavaDownloadManager\\Icons\\processing.png");
+        processing.setIcon(processingIcon);
 
         completed = new JButton("Completed");
-        completed.setPreferredSize(new Dimension(265,30));
+        completed.setPreferredSize(new Dimension(265,40));
         completed.setBackground(Color.DARK_GRAY);
+        completed.setForeground(Color.WHITE);
+        ImageIcon completedIcon = new ImageIcon("\\Users\\AHR96\\Desktop\\JavaDownloadManager\\Icons\\completed.png");
+        completed.setIcon(completedIcon);
 
         queues = new JButton("Queues") ;
-        queues.setPreferredSize(new Dimension(265,30));
+        queues.setPreferredSize(new Dimension(265,40));
         queues.setBackground(Color.DARK_GRAY);
+        queues.setForeground(Color.WHITE);
+        ImageIcon queuesIcon = new ImageIcon("\\Users\\AHR96\\Desktop\\JavaDownloadManager\\Icons\\queue.png");
+        queues.setIcon(queuesIcon);
 
         default1 = new JButton("Default") ;
-        default1.setPreferredSize(new Dimension(265,30));
+        default1.setPreferredSize(new Dimension(265,40));
         default1.setBackground(Color.DARK_GRAY);
+        default1.setForeground(Color.WHITE);
+
 
         this.add(processing);
         this.add(completed);
