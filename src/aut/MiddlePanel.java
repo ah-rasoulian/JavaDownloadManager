@@ -13,7 +13,7 @@ public class MiddlePanel
         middlePanel.setLayout(new GridLayout(10,1));
 
         middlePanel.setPreferredSize(new Dimension(ProgramFrame.getWidth().width,500));
-        middlePanel.setBackground(Color.GRAY);
+        middlePanel.setBackground(Color.WHITE);
 
     }
 

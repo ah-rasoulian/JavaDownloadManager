@@ -19,7 +19,7 @@ public class LeftPanel extends JPanel
     {
         SpringLayout layout = new SpringLayout();
         this.setLayout(layout);
-
+        this.setBackground(Color.DARK_GRAY);
         try {
             image = ImageIO.read(new File("\\Users\\AHR96\\Desktop\\JavaDownloadManager\\Icons\\logo.png"));
         } catch (IOException e) {
@@ -28,15 +28,19 @@ public class LeftPanel extends JPanel
 
         processing = new JButton("Processing");
         processing.setPreferredSize(new Dimension(265 , 30));
+        processing.setBackground(Color.DARK_GRAY);
 
         completed = new JButton("Completed");
         completed.setPreferredSize(new Dimension(265,30));
+        completed.setBackground(Color.DARK_GRAY);
 
         queues = new JButton("Queues") ;
         queues.setPreferredSize(new Dimension(265,30));
+        queues.setBackground(Color.DARK_GRAY);
 
         default1 = new JButton("Default") ;
         default1.setPreferredSize(new Dimension(265,30));
+        default1.setBackground(Color.DARK_GRAY);
 
         this.add(processing);
         this.add(completed);
