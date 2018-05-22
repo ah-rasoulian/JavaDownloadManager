@@ -1,7 +1,6 @@
 package aut;
 
 import javax.swing.*;
-import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,32 +15,33 @@ public class ToolbarPanel
         HandleActions handleActions = new HandleActions();
 
         toolbarPanel = new Panel();
+        BoxLayout layout = new BoxLayout(toolbarPanel , BoxLayout.X_AXIS);
+        toolbarPanel.setLayout(layout);
+        toolbarPanel.setPreferredSize(new Dimension(0 , 50));
 
-        toolbarPanel.setLayout(new GridLayout());
-
-        ImageIcon newIcon = new ImageIcon("\\Users\\AHR96\\Desktop\\JavaDownloadManager\\Icons\\new.png");
-        newDownload = new JButton("New Download",newIcon);
+        ImageIcon newIcon = new ImageIcon("\\Users\\AHR96\\Desktop\\JavaDownloadManager\\Icons\\add.png");
+        newDownload = new JButton(newIcon);
         newDownload.setBackground(Color.white);
         newDownload.addActionListener(handleActions);
 
         ImageIcon pauseIcon = new ImageIcon("\\Users\\AHR96\\Desktop\\JavaDownloadManager\\Icons\\pause.png");
-        JButton pause = new JButton("Pause",pauseIcon);
+        JButton pause = new JButton(pauseIcon);
         pause.setBackground(Color.white);
 
-        ImageIcon resumeIcon = new ImageIcon("\\Users\\AHR96\\Desktop\\JavaDownloadManager\\Icons\\resume.png");
-        JButton resume = new JButton("Resume",resumeIcon);
+        ImageIcon resumeIcon = new ImageIcon("\\Users\\AHR96\\Desktop\\JavaDownloadManager\\Icons\\play.png");
+        JButton resume = new JButton(resumeIcon);
         resume.setBackground(Color.white);
 
-        ImageIcon cancelIcon = new ImageIcon("\\Users\\AHR96\\Desktop\\JavaDownloadManager\\Icons\\cancel.png");
-        JButton cancel = new JButton("Cancel",cancelIcon);
+        ImageIcon cancelIcon = new ImageIcon("\\Users\\AHR96\\Desktop\\JavaDownloadManager\\Icons\\remove.png");
+        JButton cancel = new JButton(cancelIcon);
         cancel.setBackground(Color.white);
 
-        ImageIcon removeIcon = new ImageIcon("\\Users\\AHR96\\Desktop\\JavaDownloadManager\\Icons\\remove.png");
-        JButton remove = new JButton("Remove",removeIcon);
+        ImageIcon removeIcon = new ImageIcon("\\Users\\AHR96\\Desktop\\JavaDownloadManager\\Icons\\taskcleaner.png");
+        JButton remove = new JButton(removeIcon);
         remove.setBackground(Color.white);
 
-        ImageIcon settingIcon = new ImageIcon("\\Users\\AHR96\\Desktop\\JavaDownloadManager\\Icons\\setting.png");
-        JButton setting = new JButton("Setting",settingIcon);
+        ImageIcon settingIcon = new ImageIcon("\\Users\\AHR96\\Desktop\\JavaDownloadManager\\Icons\\settings.png");
+        JButton setting = new JButton(settingIcon);
         setting.setBackground(Color.white);
 
         toolbarPanel.add(newDownload);

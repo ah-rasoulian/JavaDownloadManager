@@ -11,28 +11,35 @@ public class ProgramFrame
 
     public ProgramFrame ()
     {
+        JFrame.setDefaultLookAndFeelDecorated(true);
+
         mainFrame = new JFrame("Java Download Manager");
         //mainFrame.setLocationRelativeTo(null);
-        mainFrame.setPreferredSize(null);
+//        mainFrame.setPreferredSize(null);
+        mainFrame.setSize(800 , 500);
+
         JPanel framePanel = new JPanel();
         framePanel.setLayout(new BorderLayout());
         mainFrame.setContentPane(framePanel);
 
-        JPanel toolbarAndMenu = new JPanel();
-        toolbarAndMenu.setLayout(new BorderLayout());
-        framePanel.add(toolbarAndMenu , BorderLayout.NORTH) ;
-
         ToolbarPanel toolBar = new ToolbarPanel();
         width = toolBar.getToolbarPanel().getPreferredSize() ;
-        toolbarAndMenu.add(toolBar.getToolbarPanel() ,BorderLayout.CENTER);
 
         MenubarPanel menuBar = new MenubarPanel();
-        toolbarAndMenu.add(menuBar.getMenuPanel() , BorderLayout.NORTH);
+        framePanel.add(menuBar.getMenuPanel() , BorderLayout.NORTH) ;
 
         middlePanel = new MiddlePanel();
+        JPanel rightPanel = new JPanel(new BorderLayout());
+        rightPanel.add(toolBar.getToolbarPanel() , BorderLayout.NORTH);
+        rightPanel.add(middlePanel.getMiddlePanel() , BorderLayout.CENTER);
 
-        framePanel.add(middlePanel.getMiddlePanel(),BorderLayout.CENTER);
-        mainFrame.pack();
+        framePanel.add(rightPanel,BorderLayout.CENTER);
+
+        LeftPanel leftPanel = new LeftPanel();
+        framePanel.add(leftPanel,BorderLayout.WEST);
+        leftPanel.setPreferredSize(new Dimension(265 , 0));
+
+
     }
 
     public static void addNew (JPanel newDownload)
