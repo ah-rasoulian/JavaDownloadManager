@@ -42,9 +42,9 @@ public class ProgramFrame
 
     }
 
-    public static void addNew (JPanel newDownload)
+    public static void addNew (DownloadPanel newDownload)
     {
-        middlePanel.getMiddlePanel().add(newDownload);
+        middlePanel.addNewPanel(newDownload);
         middlePanel.getMiddlePanel().revalidate();
         middlePanel.getMiddlePanel().repaint();
     }

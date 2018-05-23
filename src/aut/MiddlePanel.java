@@ -2,24 +2,32 @@ package aut;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class MiddlePanel
 {
-    private JPanel middlePanel ;
+    private JScrollPane middlePanel ;
+    private DefaultListModel downloadPanels;
+    private JList<DownloadPanel> list;
 
     public MiddlePanel()
     {
-        middlePanel = new JPanel();
-        middlePanel.setLayout(new BoxLayout(middlePanel , BoxLayout.Y_AXIS));
+        downloadPanels = new DefaultListModel();
+        list = new JList<>(downloadPanels);
+        
+        middlePanel = new JScrollPane(list);
 
-        middlePanel.setPreferredSize(new Dimension(ProgramFrame.getWidth().width,500));
         middlePanel.setBackground(Color.GRAY);
         
 
     }
 
-    public JPanel getMiddlePanel() {
+    public JScrollPane getMiddlePanel() {
         return middlePanel;
     }
 
+    public void addNewPanel (DownloadPanel downloadPanel)
+    {
+        downloadPanels.addElement(downloadPanel);
+    }
 }
