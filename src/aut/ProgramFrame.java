@@ -14,8 +14,7 @@ public class ProgramFrame
         JFrame.setDefaultLookAndFeelDecorated(true);
 
         mainFrame = new JFrame("Java Download Manager");
-        //mainFrame.setLocationRelativeTo(null);
-//        mainFrame.setPreferredSize(null);
+
         mainFrame.setSize(800 , 500);
 
         JPanel framePanel = new JPanel();
@@ -42,9 +41,9 @@ public class ProgramFrame
 
     }
 
-    public static void addNew (DownloadPanel newDownload)
+    public static void addNew (NewDownload newDownload)
     {
-        middlePanel.addNewPanel(newDownload);
+        middlePanel.addNewDownload(newDownload);
         middlePanel.getMiddlePanel().revalidate();
         middlePanel.getMiddlePanel().repaint();
     }
@@ -54,7 +53,4 @@ public class ProgramFrame
         mainFrame.setVisible(true);
     }
 
-    public static Dimension getWidth() {
-        return width;
-    }
 }
