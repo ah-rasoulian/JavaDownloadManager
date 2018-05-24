@@ -7,7 +7,7 @@ import java.awt.*;
 public class MiddlePanel
 {
     private JScrollPane middlePanel ;
-    private DefaultListModel downloads;
+    private static DefaultListModel downloads;
     private JList<DownloadPanel> list;
 
     public MiddlePanel()
@@ -29,7 +29,7 @@ public class MiddlePanel
         return middlePanel;
     }
 
-    public void addNewDownload (NewDownload newDownload)
+    public static void addNewDownload (NewDownload newDownload)
     {
         downloads.addElement(newDownload);
     }

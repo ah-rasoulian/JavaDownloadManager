@@ -94,7 +94,7 @@ public class NewDownloadFrame
             if ( e.getSource().equals(ok))
             {
                 NewDownload newDownload = new NewDownload(urlAddress.getText() , saveAddress.getText());
-                ProgramFrame.addNew(newDownload);
+                MiddlePanel.addNewDownload(newDownload);
                 newDownloadFrame.setVisible(false);
             }
             if ( e.getSource().equals(cancel))

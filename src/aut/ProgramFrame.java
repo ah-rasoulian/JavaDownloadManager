@@ -11,7 +11,7 @@ public class ProgramFrame
 
     public ProgramFrame ()
     {
-        JFrame.setDefaultLookAndFeelDecorated(true);
+     //   JFrame.setDefaultLookAndFeelDecorated(true);
 
         mainFrame = new JFrame("Java Download Manager");
 
@@ -39,13 +39,6 @@ public class ProgramFrame
         leftPanel.setPreferredSize(new Dimension(265 , 0));
 
 
-    }
-
-    public static void addNew (NewDownload newDownload)
-    {
-        middlePanel.addNewDownload(newDownload);
-        middlePanel.getMiddlePanel().revalidate();
-        middlePanel.getMiddlePanel().repaint();
     }
 
     public void showFrame ()

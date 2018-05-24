@@ -15,8 +15,7 @@ public class DownloadPanel implements ListCellRenderer
     @Override
     public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
 
-        JLabel panel = (JLabel) defaultRenderer.getListCellRendererComponent(list,value,index,isSelected,cellHasFocus);
-        System.out.println("slm");
+        JPanel panel = (JPanel) value;
         return panel;
     }
 }
