@@ -21,8 +21,9 @@ public class LeftPanel extends JPanel
         this.setLayout(layout);
         this.setBackground(Color.DARK_GRAY);
         try {
-            image = ImageIO.read(new File("\\Users\\AHR96\\Desktop\\JavaDownloadManager\\Icons\\logo.png"));
+            image = ImageIO.read(new File("/home/amirhossein/Data/University/Advanced Programming/JavaDownloadManager/Icons/logo.png"));
         } catch (IOException e) {
+            System.out.println("vay");
             e.printStackTrace();
         }
 
@@ -30,21 +31,21 @@ public class LeftPanel extends JPanel
         processing.setPreferredSize(new Dimension(265 , 40));
         processing.setBackground(Color.DARK_GRAY);
         processing.setForeground(Color.WHITE);
-        ImageIcon processingIcon = new ImageIcon("\\Users\\AHR96\\Desktop\\JavaDownloadManager\\Icons\\processing.png");
+        ImageIcon processingIcon = new ImageIcon("/home/amirhossein/Data/University/Advanced Programming/JavaDownloadManager/Icons/processing.png");
         processing.setIcon(processingIcon);
 
         completed = new JButton("Completed");
         completed.setPreferredSize(new Dimension(265,40));
         completed.setBackground(Color.DARK_GRAY);
         completed.setForeground(Color.WHITE);
-        ImageIcon completedIcon = new ImageIcon("\\Users\\AHR96\\Desktop\\JavaDownloadManager\\Icons\\completed.png");
+        ImageIcon completedIcon = new ImageIcon("/home/amirhossein/Data/University/Advanced Programming/JavaDownloadManager/Icons/completed.png");
         completed.setIcon(completedIcon);
 
         queues = new JButton("Queues") ;
         queues.setPreferredSize(new Dimension(265,40));
         queues.setBackground(Color.DARK_GRAY);
         queues.setForeground(Color.WHITE);
-        ImageIcon queuesIcon = new ImageIcon("\\Users\\AHR96\\Desktop\\JavaDownloadManager\\Icons\\queue.png");
+        ImageIcon queuesIcon = new ImageIcon("/home/amirhossein/Data/University/Advanced Programming/JavaDownloadManager/Icons/queue.png");
         queues.setIcon(queuesIcon);
 
         default1 = new JButton("Default") ;

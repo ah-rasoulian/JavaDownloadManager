@@ -26,28 +26,28 @@ public class ToolbarPanel
 
         toolbarPanel.setPreferredSize(new Dimension(0 , 50));
 
-        ImageIcon newIcon = new ImageIcon("\\Users\\AHR96\\Desktop\\JavaDownloadManager\\Icons\\add.png");
+        ImageIcon newIcon = new ImageIcon("/home/amirhossein/Data/University/Advanced Programming/JavaDownloadManager/Icons/add.png");
         newDownload = new JButton(newIcon);
         newDownload.setBackground(Color.WHITE);
         newDownload.addActionListener(handleActions);
 
-        ImageIcon pauseIcon = new ImageIcon("\\Users\\AHR96\\Desktop\\JavaDownloadManager\\Icons\\pause.png");
+        ImageIcon pauseIcon = new ImageIcon("/home/amirhossein/Data/University/Advanced Programming/JavaDownloadManager/Icons/pause.png");
         pause = new JButton(pauseIcon);
         pause.setBackground(Color.WHITE);
 
-        ImageIcon resumeIcon = new ImageIcon("\\Users\\AHR96\\Desktop\\JavaDownloadManager\\Icons\\play.png");
+        ImageIcon resumeIcon = new ImageIcon("/home/amirhossein/Data/University/Advanced Programming/JavaDownloadManager/Icons/play.png");
         resume = new JButton(resumeIcon);
         resume.setBackground(Color.WHITE);
 
-        ImageIcon cancelIcon = new ImageIcon("\\Users\\AHR96\\Desktop\\JavaDownloadManager\\Icons\\remove.png");
+        ImageIcon cancelIcon = new ImageIcon("/home/amirhossein/Data/University/Advanced Programming/JavaDownloadManager/Icons/remove.png");
         cancel = new JButton(cancelIcon);
         cancel.setBackground(Color.WHITE);
 
-        ImageIcon removeIcon = new ImageIcon("\\Users\\AHR96\\Desktop\\JavaDownloadManager\\Icons\\taskcleaner.png");
+        ImageIcon removeIcon = new ImageIcon("/home/amirhossein/Data/University/Advanced Programming/JavaDownloadManager/Icons/taskcleaner.png");
         remove = new JButton(removeIcon);
         remove.setBackground(Color.WHITE);
 
-        ImageIcon settingIcon = new ImageIcon("\\Users\\AHR96\\Desktop\\JavaDownloadManager\\Icons\\settings.png");
+        ImageIcon settingIcon = new ImageIcon("/home/amirhossein/Data/University/Advanced Programming/JavaDownloadManager/Icons/settings.png");
         setting = new JButton(settingIcon);
         setting.setBackground(Color.WHITE);
 

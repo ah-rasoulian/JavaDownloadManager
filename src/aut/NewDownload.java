@@ -51,7 +51,7 @@ public class NewDownload extends JPanel
         layout.putConstraint(SpringLayout.WEST , dlIcon , 10 ,SpringLayout.WEST , this);
         layout.putConstraint(SpringLayout.NORTH , dlIcon, 10 , SpringLayout.NORTH , this);
         layout.putConstraint(SpringLayout.WEST , nameOfFile , 40 ,SpringLayout.WEST , this);
-        layout.putConstraint(SpringLayout.NORTH , nameOfFile , 5 , SpringLayout.NORTH , this);
+        layout.putConstraint(SpringLayout.NORTH , nameOfFile ,3 , SpringLayout.NORTH , this);
         layout.putConstraint(SpringLayout.WEST , progressBar, 40 , SpringLayout.WEST , this);
         layout.putConstraint(SpringLayout.NORTH , progressBar , 20, SpringLayout.NORTH , this);
         layout.putConstraint(SpringLayout.NORTH , percentDl , 17, SpringLayout.NORTH , this);
@@ -63,11 +63,11 @@ public class NewDownload extends JPanel
 
     }
 
-    public String downloadedBytesString (long byteDownloaded , long wholeBytes)
+    private String downloadedBytesString (long byteDownloaded , long wholeBytes)
     {
         return "20Mg/100Mg";
     }
-    public String rateString (long rate)
+    private String rateString (long rate)
     {
         return "30Kb /sec" ;
     }
